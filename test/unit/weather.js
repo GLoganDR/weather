@@ -69,4 +69,12 @@ describe ('Weather', function (){
       });
     });
   });
+  describe ('.moon', function(){
+    it('should return the reading of the phases of the moon', function(done){
+      Weather.moon(37203, function(moon){
+        expect(moon).to.equal('Crescent');
+        done();
+      });
+    });
+  });
 });
